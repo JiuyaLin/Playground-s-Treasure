@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 
 public class MoveCollideScript: MonoBehaviour
@@ -8,7 +7,7 @@ public class MoveCollideScript: MonoBehaviour
     public float speed;
     public float hspeed = 0;
     public float vspeed = 0;
-  
+    public Controller controller;
     private Vector3 playerVelocity;
 
     // Start is called before the first frame update
