@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveCollideScript: MonoBehaviour
 {
     public float speed;
-    private Vector direction = Vector2.zero;
+   
 
     
 
@@ -18,11 +18,27 @@ public class MoveCollideScript: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        direction = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
-        
+        Vector3 pos = transform.position;
 
-        gameObject.transform.position = new Vector2(transform.position.x + (h * speed),
-      transform.position.y + (v * speed));
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            pos.y += speed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            pos.y -= speed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            pos.x += speed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            pos.x -= speed * Time.deltaTime;
+        }
+
+
+        transform.position = pos;
 
     }
 
