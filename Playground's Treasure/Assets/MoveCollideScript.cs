@@ -5,8 +5,7 @@ using UnityEngine;
 public class MoveCollideScript: MonoBehaviour
 {
     public float speed;
-    public float hspeed = 0;
-    public float vspeed = 0;
+   
     
     private Vector3 playerVelocity;
 
@@ -19,7 +18,11 @@ public class MoveCollideScript: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float h = Input.GetAxisRaw(“Horizontal”);
+        float v = Input.GetAxisRaw(“Vertical”);
 
+        gameObject.transform.position = new Vector2(transform.position.x + (h * speed),
+      transform.position.y + (v * speed));
 
     }
 
