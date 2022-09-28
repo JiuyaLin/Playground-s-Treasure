@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SlideScrit : MonoBehaviour
 {
-   public GameManagerScript gameManager;
+    public GameManagerScript gameManager;
     public AudioSource audioSource;
-   private Rigidbody2D rb;
+    private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +16,8 @@ public class SlideScrit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
- 
+
+
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -26,9 +26,7 @@ public class SlideScrit : MonoBehaviour
         {
             Destroy(this.gameObject);
             print("hit");
-           
-
-
+            gameManager.wrong.Play();
 
 
         }
