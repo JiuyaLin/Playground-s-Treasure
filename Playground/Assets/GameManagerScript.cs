@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManagerScript : MonoBehaviour
 {
     private GameObject  worm;
-    private GameObject  star;
+
     public AudioSource wrong;
     public AudioSource right;
     private Rigidbody2D rb;
@@ -21,6 +21,8 @@ public class GameManagerScript : MonoBehaviour
     {
 
     }
+
+
 
 
 }

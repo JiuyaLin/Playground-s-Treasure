@@ -8205,6 +8205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Square: {fileID: 46957287}
+  SecondSquare: {fileID: 1779953451}
 --- !u!61 &1708215603
 BoxCollider2D:
   m_ObjectHideFlags: 0
