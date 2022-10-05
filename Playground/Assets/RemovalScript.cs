@@ -1,15 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
-public class GameManagerScript : MonoBehaviour
+public class RemovalScript : MonoBehaviour
 {
-    private GameObject  worm;
-    private GameObject  star;
-    public AudioSource wrong;
-    public AudioSource right;
     private Rigidbody2D rb;
+    public GameObject Square;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +17,16 @@ public class GameManagerScript : MonoBehaviour
     {
 
     }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "worm")
+        {
+            print("hit");
+            Destroy(Square);
+            Destroy(this.gameObject);
 
 
+
+        }
+    }
 }
