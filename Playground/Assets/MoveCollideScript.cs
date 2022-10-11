@@ -42,8 +42,21 @@ public class MoveCollideScript: MonoBehaviour
 
     }
 
-    
+    void OnCollisionEnter2D()
+    {
+        Debug.Log("player collided with something");
+        StartCoroutine(pauseSound());
 
+    }
+
+
+    
+    IEnumerator pauseSound()
+    {
+        yield return new WaitForSeconds(1);
+        //sound code
+        Debug.Log("play sound");
+    }
 
 }
 
