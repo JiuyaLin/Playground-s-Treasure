@@ -22,7 +22,7 @@ public class RemovalScript1 : MonoBehaviour
     {
         if (collision.gameObject.name == "worm")
         {
-            Elim = GameObject.FindGameObjectsWithTag("Round1");
+            Elim = GameObject.FindGameObjectsWithTag("Round2");
             foreach (GameObject elim in Elim) //destroy each varible in Elim
             {
                 Destroy(elim);

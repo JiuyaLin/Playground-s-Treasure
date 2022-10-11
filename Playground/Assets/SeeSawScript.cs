@@ -27,7 +27,7 @@ public class SeeSawScript : MonoBehaviour
             print("hit");
 
 
-            gameManager.wrong.Play();
+            
 
         }
     }

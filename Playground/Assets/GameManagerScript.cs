@@ -2,13 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
-    private GameObject  worm;
-
-    public AudioSource wrong;
-    public AudioSource right;
+  
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +17,10 @@ public class GameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKey(KeyCode.Space))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 
 
